@@ -47,10 +47,10 @@ var Numbers = function(){
 // Promts--------------------------------------------
 
 var NumDigits = function(){
-    var promptNumDigits = window.prompt("How many digits do you want your password to be?");
+    var promptNumDigits = window.prompt("Please pick a password between 8 - 128 charcters");
 
-    if (isNaN(promptNumDigits)){
-        window.alert("You need to pick a number, please.");
+    if (isNaN(promptNumDigits) || promptNumDigits.length > 128 || promptNumDigits.length < 8){
+        window.alert("You need to pick a number betwwen 8 - 128 charcters, please.");
         // console.log("test");
         return NumDigits();
 
