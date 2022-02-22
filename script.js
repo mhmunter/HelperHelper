@@ -1,56 +1,93 @@
-// Assignment code here
-blank = []
-var LowerCase =function(){
-for (var i = 97; i < 123; i++){
-  console.log(String.fromCharCode(i))
-  blank.push(String.fromCharCode(i))
- }
- console.log(blank[Math.floor(Math.random() * blank.length)]);
-};
-console.log(LowerCase());
-
-console.log(blank)
-
-
-
-blank2 = []
-var UpperCase =function(){
-for (var i = 65; i < 91; i++){
-  console.log(String.fromCharCode(i))
-  blank2.push(String.fromCharCode(i))
- }
- console.log(blank2[Math.floor(Math.random() * blank2.length)]);
-};
-console.log(UpperCase());
-
-
-
-
-
-
-blank3 = []
-var SpChr = function(){
-  for (var i = 58; i < 65; i++){
-    console.log(String.fromCharCode(i))
-
-  }
-      // console.log(blank3[Math.floor(Math.random() * blank3.length)]);
-};
-console.log(SpChr());
-console.log(blank3)
-
-
-
-// blank3 = [0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9]
-// var Numbers = function(){
-//   for (var i = 0; i < 8; i++){
-//     console.log(Numbers(i));
-//   }
+// // Assignment code here
+// blank = []
+// var LowerCase =function(){
+// for (var i = 97; i < 123; i++){
+//   String.fromCharCode(i)
+//   blank.push(String.fromCharCode(i))
+//  }
+//  (blank[Math.floor(Math.random() * blank.length)]);
 // };
 
 
 
 
+// blank2 = []
+// var UpperCase =function(){
+// for (var i = 65; i < 91; i++){
+//   String.fromCharCode(i)
+//   blank2.push(String.fromCharCode(i))
+//  }
+//  blank2[Math.floor(Math.random() * blank2.length)];
+// };
+
+
+
+
+// blank3 = []
+// var SpChr = function(){
+//   for (var i = 58; i < 65; i++){
+//     String.fromCharCode(i)
+//     blank3.push(String.fromCharCode(i))
+//   }
+//     blank3[Math.floor(Math.random() * blank3.length)];
+// };
+
+
+
+
+// blank4 = []
+// var Numbers = function(){
+//   for (var i = 0; i <= 9; i++){
+//     console.log((i));
+//     blank4.push(i)
+//   }
+//   blank4[Math.floor(Math.random() * blank4.length)];
+// };
+
+// Promts--------------------------------------------
+
+
+
+var NumDigits = function(){
+    var promptNumDigits = window.prompt("How many digits do you want your password to be?");
+
+    if (isNaN(promptNumDigits)){
+        window.alert("You need to pick a number, please.");
+        // console.log("test");
+        return NumDigits();
+
+    }
+    else{
+        var promtCap = window.prompt("Would you like your password to have capital letters?").toUpperCase();
+        // if(promtCap.toUpperCase() === "YES"){
+            console.log(promtCap)
+        // }
+            var promtLow = window.prompt("Would you like your password to have lower letters?").toUpperCase();
+        // if(promtLow.toUpperCase() === "YES"){
+        //     console.log("Lower Letters")
+        console.log(promtLow)
+            var promtNum = window.prompt("Would you like your password to have numbers?").toUpperCase();
+            // if(promtNum.toUpperCase() === "YES"){
+            //     console.log("Numbers")
+            console.log(promtNum0)
+                // var promtSp = window.prompt("Would you like your password to have special characters?");
+                // if(promtSp.toUpperCase() === "YES" && ){
+                    
+        
+        
+        }
+
+
+        
+
+
+
+
+    // }
+
+
+}
+NumDigits();
 
 
 
