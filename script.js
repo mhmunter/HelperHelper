@@ -78,18 +78,18 @@ var NumDigits = function(){
         intro = []
 
     for (var i = 0; i < promptNumDigits.length; i++){
-        // intro.push(i)
+        intro.push(i)
     
     if (promtCap === "YES"){
     intro.push(UpperCase())
 }
-else if(promtLow === "YES"){
+ if(promtLow === "YES"){
 intro.push(LowerCase())
 }
-else if (promtNum === "YES"){
+ if (promtNum === "YES"){
     intro.push(Numbers())
 }
-else( promtSp === "YES")
+if( promtSp === "YES")
 intro.push(SpChr())
 }
 console.log(intro)
