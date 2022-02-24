@@ -5,7 +5,7 @@ for (var i = 97; i < 123; i++){
   String.fromCharCode(i)
   blank.push(String.fromCharCode(i))
  }
- (blank[Math.floor(Math.random() * blank.length)]);
+ return blank[Math.floor(Math.random() * blank.length)];
 };
 
 
@@ -17,7 +17,7 @@ for (var i = 65; i < 91; i++){
   String.fromCharCode(i)
   blank2.push(String.fromCharCode(i))
  }
- blank2[Math.floor(Math.random() * blank2.length)];
+ return blank2[Math.floor(Math.random() * blank2.length)];
 };
 
 
@@ -29,7 +29,7 @@ var SpChr = function(){
     String.fromCharCode(i)
     blank3.push(String.fromCharCode(i))
   }
-    blank3[Math.floor(Math.random() * blank3.length)];
+    return blank3[Math.floor(Math.random() * blank3.length)];
 };
 
 
@@ -38,10 +38,10 @@ var SpChr = function(){
 blank4 = []
 var Numbers = function(){
   for (var i = 0; i <= 9; i++){
-    console.log((i));
+    // console.log((i));
     blank4.push(i)
   }
-  blank4[Math.floor(Math.random() * blank4.length)];
+  return blank4[Math.floor(Math.random() * blank4.length)];
 };
 
 // Promts--------------------------------------------
@@ -49,7 +49,7 @@ var Numbers = function(){
 var NumDigits = function(){
     var promptNumDigits = window.prompt("Please pick a password between 8 - 128 charcters");
 
-    if (isNaN(promptNumDigits) || promptNumDigits.length > 128 || promptNumDigits.length < 8){
+    if (isNaN(promptNumDigits) || promptNumDigits > 128 || promptNumDigits < 8){
         window.alert("You need to pick a number betwwen 8 - 128 charcters, please.");
         // console.log("test");
         return NumDigits();
@@ -68,31 +68,33 @@ var NumDigits = function(){
             // if(promtNum.toUpperCase() === "YES"){
             //     console.log("Numbers")
             // console.log(promtNum0)
-                var promtSp = window.prompt("Would you like your password to have special characters?");
+                var promtSp = window.prompt("Would you like your password to have special characters?").toUpperCase();
                 // if(promtSp.toUpperCase() === "YES" && ){
                     
         
         
         }
 
-        intro = []
+        // intro = []
+        var intro = ''
 
-    for (var i = 0; i < promptNumDigits.length; i++){
-        intro.push(i)
-    
+    for (var i = 0; i < promptNumDigits; i++){
+        // intro.push(i)
+            
     if (promtCap === "YES"){
-    intro.push(UpperCase())
+    intro = intro.concat(UpperCase())
 }
  if(promtLow === "YES"){
-intro.push(LowerCase())
+intro = intro.concat(LowerCase())
 }
  if (promtNum === "YES"){
-    intro.push(Numbers())
+    intro = intro.concat(Numbers())
 }
 if( promtSp === "YES")
-intro.push(SpChr())
+intro = intro.concat(SpChr())
 }
 console.log(intro)
+console.log(intro.length)
 }
     
 
