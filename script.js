@@ -60,7 +60,7 @@ var generatePassword = function(){
     var promptNumDigits = window.prompt("Please pick a password between 8 - 128 charcters");
 
     if (isNaN(promptNumDigits) || promptNumDigits > 128 || promptNumDigits < 8){
-        window.alert("You need to pick a number betwwen 8 - 128 charcters, please.");
+        window.alert("You need to pick a number betwwen 8 - 128 please.");
         // console.log("test");
         return generatePassword();
 
@@ -81,7 +81,6 @@ var generatePassword = function(){
                 var promtSp = window.prompt("Would you like your password to have special characters?").toUpperCase();
                 // if(promtSp.toUpperCase() === "YES" && ){
                     
-
                  
         }
 
@@ -115,9 +114,9 @@ if( promtSp === "YES")
 intro = intro.concat(SpChr())
 
 }
-
+intro = intro.substring(0 , promptNumDigits);
 // console.log(intro)
-// console.log(intro.length)
+console.log(intro.length)
 return intro
 
 
