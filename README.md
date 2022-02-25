@@ -1,7 +1,7 @@
 # HelperHelper
+I used math functions and created random generating functions. 
 
-
-
+I added prompts for user interface and used if statments to create passwords.
 
 
 
